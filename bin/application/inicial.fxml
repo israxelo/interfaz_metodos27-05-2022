@@ -9,12 +9,12 @@
    <children>
       <Text fx:id="cerrar" layoutX="771.0" layoutY="27.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
       <Button fx:id="Cambio" layoutX="335.0" layoutY="718.0" mnemonicParsing="false" onMouseClicked="#cambiar" prefHeight="33.0" prefWidth="130.0" styleClass="glass" text="Registrarme" />
-      <TextField layoutX="136.0" layoutY="400.0" prefHeight="25.0" prefWidth="542.0" styleClass="glass" />
-      <TextField layoutX="136.0" layoutY="514.0" prefHeight="25.0" prefWidth="542.0" styleClass="glass" />
-      <Text layoutX="386.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
-      <Text layoutX="365.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
-      <Button fx:id="iniciar" layoutX="341.0" layoutY="592.0" mnemonicParsing="false" onMouseClicked="#iniciar" styleClass="glass" text="Iniciar Sesion" />
-      <Text layoutX="338.0" layoutY="678.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿No tienes cuenta?" />
-      <Text layoutX="209.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 67;" text="Iniciar sesión" wrappingWidth="477.7513656616211" />
+      <TextField layoutX="136.0" layoutY="355.0" prefHeight="25.0" prefWidth="542.0" styleClass="glass" />
+      <TextField layoutX="136.0" layoutY="474.0" prefHeight="25.0" prefWidth="542.0" styleClass="glass" />
+      <Text fill="WHITE" layoutX="386.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text fill="WHITE" layoutX="365.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
+      <Button fx:id="iniciar" layoutX="341.0" layoutY="603.0" mnemonicParsing="false" onMouseClicked="#iniciar" styleClass="glass" text="Iniciar Sesion" />
+      <Text fill="WHITE" layoutX="338.0" layoutY="678.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿No tienes cuenta?" />
+      <Text fill="WHITE" layoutX="206.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 67;" text="Iniciar sesión" wrappingWidth="417.7513656616211" />
    </children>
 </AnchorPane>

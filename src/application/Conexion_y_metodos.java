@@ -1,4 +1,4 @@
-package Conexion_y_Métodos;
+package application;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -11,10 +11,13 @@ import java.sql.Types;
 import java.util.Scanner;
 
 
-public class Conexion_y_metodos {
+public class Conexion_y_metodos extends Main{
+	Conexion_y_metodos(){
+		conectar();
+	}
 	private static String bd = "XE";
-	private static String login="PROYECTO";
-	private static String password="proyecto";
+	private static String login="alumno";
+	private static String password="alumno";
 	private static String url="jdbc:oracle:thin:@localhost:1521:"+bd;
 	static Connection conexion =null;
 	static Statement st =null;
@@ -71,39 +74,11 @@ public class Conexion_y_metodos {
 		}
 
 	}
-	public static void Registro(int num) {
-		Scanner sc = new Scanner(System.in);
-		String email2 = null;
-		String contra2 =null;
-		int aux = -1;
+	public static void Registro(String email2,String contra2) {
 		try {
-			if(num == 0) {
-				while(aux ==-1) {
-					System.out.println("introduce el email");
-					email2 = sc.nextLine();
-					System.out.println("introduce la contraseña");
-					contra2 = sc.nextLine();
-					cs = conexion.prepareCall("{ ? = call REGISTRO(?,?)}");
-					cs.setString(2, email2);
-					cs.setString(3,contra2);
-					cs.registerOutParameter(1, Types.INTEGER);
-					cs.execute();
-					aux = cs.getInt(1);
-					if(aux==-1) {
-						System.out.println("datos mal introducidos o inexistentes");
-					}
-				}
-				email = email2;
-				contra = contra2;
-			}
-			else if(num ==1) {
-				System.out.println("introduce el email");
-				email2 = sc.nextLine();
-				System.out.println("introduce la contraseÃ±a");
-				contra2 = sc.nextLine();
-				st = conexion.createStatement();
-				st.executeUpdate("insert into CLIENTES values ('"+email2+"','" + contra2+"')");
-			}
+			st = conexion.createStatement();
+			st.executeUpdate("insert into CLIENTES values ('"+email2+"','" + contra2+"')");
+			st.executeUpdate("commit");
 			email = email2;
 			contra = contra2;
 		} 
@@ -113,15 +88,32 @@ public class Conexion_y_metodos {
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
+
 	}
+	public static void Iniciar_Sesion() {
+		String email2 = null;
+		String contra2 =null;
+		int aux = -1;
+		
+				try {
+					cs = conexion.prepareCall("{ ? = call REGISTRO(?,?)}");
+					cs.setString(2, email2);
+					cs.setString(3,contra2);
+					cs.registerOutParameter(1, Types.INTEGER);
+					cs.execute();
+					aux = cs.getInt(1);
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+				if(aux==-1) {
+					System.out.println("datos mal introducidos o inexistentes");
+				}
+		
+			email = email2;
+			contra = contra2;
+		
 
+	
 
-
-	public static void main(String[] args) {
-		conectar();
-		Registro(0);
-	}
-
-
-
+}
 }

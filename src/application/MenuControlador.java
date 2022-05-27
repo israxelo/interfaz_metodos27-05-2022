@@ -11,4 +11,7 @@ public class MenuControlador {
     void close(MouseEvent event) {
     	System.exit(0);
     }
+	public Object cerrar() {
+		return null;
+	}
 }
