@@ -38,7 +38,8 @@ public class Conexion_y_metodos extends Main{
 			e.printStackTrace();
 		}
 	}
-	public static void ver_todo(int num) {
+	public static String ver_todo(int num) {
+		String cadena ="";
 		try {
 			st = conexion.createStatement();
 			switch (num) {
@@ -46,7 +47,7 @@ public class Conexion_y_metodos extends Main{
 				rs = st.executeQuery("select * from videojuego");
 				break;
 			case 1:
-				rs = st.executeQuery("select * from videojuego where categoria = 'Acci�n'");
+				rs = st.executeQuery("select * from videojuego where categoria = 'Acción'");
 				break;
 			case 2:
 				rs = st.executeQuery("select * from videojuego where categoria = 'Aventura'");
@@ -65,11 +66,12 @@ public class Conexion_y_metodos extends Main{
 				break;
 			}
 			while(rs.next()) {
-				System.out.println(rs.getString("COD_VIDEOJUEGO") + "---" + rs.getString("TITULO") +"--" + rs.getString("CATEGORIA") + "--" + rs.getDouble("PRECIO"));
+				cadena +=(rs.getString("COD_VIDEOJUEGO") + "---" + rs.getString("TITULO") +"--" + rs.getString("CATEGORIA") + "--" + rs.getDouble("PRECIO") + "\n");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return cadena;
 
 	}
 	public static void Registro(String email2,String contra2) throws SQLException {
@@ -116,4 +118,38 @@ public class Conexion_y_metodos extends Main{
 		}
 		return cadena;
 	}
+	public static boolean HacerPedidos(String cod,String tipo,int dias) {
+		int aux = 0;
+		try {
+			cs = conexion.prepareCall("{ ? = call HACER_PEDIDO(?,?,?,?)}");
+			cs.setString(2,cod);
+			cs.setString(3,tipo);
+			cs.setString(4,email);
+			cs.setInt(5, dias);
+			cs.registerOutParameter(1, Types.INTEGER);
+			cs.execute();
+			aux = cs.getInt(1);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if(aux == 1) {return true;}
+		else
+			return false;
+	}
+	public static String ListaPedidos() {
+		String cadena ="";
+		try {
+			st = conexion.createStatement();
+			rs = st.executeQuery("select * from PEDIDOS where EMAIL ='" +email+"'");
+			while(rs.next()) {
+				cadena +=(rs.getString("TIPO") + "---" + rs.getString("TITULO") +"--" + rs.getString("EMAIL") + "--" + rs.getDouble("PRECIO") +"--"+rs.getDate("FECHA") +"\n");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return cadena;
+	}
+
+
+
 }

@@ -14,7 +14,7 @@
             <String fx:value="sale" />
             <String fx:value="textos" />
          </styleClass></Button>
-      <Button layoutX="469.0" layoutY="209.0" mnemonicParsing="false" prefHeight="224.0" prefWidth="290.0" stylesheets="@application.css" text="Hacer Pedido">
+      <Button fx:id="Pedido" layoutX="469.0" layoutY="209.0" mnemonicParsing="false" onMouseClicked="#MenuPedido" prefHeight="224.0" prefWidth="290.0" stylesheets="@application.css" text="Hacer Pedido">
          <styleClass>
             <String fx:value="sale" />
             <String fx:value="textos" />

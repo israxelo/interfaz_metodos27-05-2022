@@ -19,6 +19,8 @@ public class MenuControlador extends inicialControlador{
 	private Button BotonCatalogo;
 	@FXML
 	private Button botonReparar;
+    @FXML
+    private Button Pedido;
 	@FXML
 	void close(MouseEvent event) {
 		System.exit(0);
@@ -55,6 +57,24 @@ public class MenuControlador extends inicialControlador{
 			stage.show();
 			stage.setOnCloseRequest(e -> controlador.cerrar());
 			Stage mystage = (Stage) this.BotonCatalogo.getScene().getWindow();
+			mystage.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    void MenuPedido(MouseEvent event) {
+    	try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Pedidos.fxml"));
+			Parent root = loader.load();
+			PedidosControlador controlador = loader.getController();
+			Scene scene = new Scene(root);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.initStyle(StageStyle.UNDECORATED);
+			stage.show();
+			stage.setOnCloseRequest(e -> controlador.cerrar());
+			Stage mystage = (Stage) this.Pedido.getScene().getWindow();
 			mystage.close();
 		} catch (IOException e) {
 			e.printStackTrace();

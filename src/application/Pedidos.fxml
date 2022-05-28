@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="fondoiniciarsesion" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" styleClass="textos" stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PedidosControlador">
+   <children>
+      <Text fx:id="cerrar" layoutX="771.0" layoutY="27.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
+      <Text fill="WHITE" layoutX="291.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 67;" text="Pedidos" wrappingWidth="246.7513656616211" />
+      <Button layoutX="50.0" layoutY="402.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="183.0" styleClass="sale" text="Alquiler" />
+      <Button layoutX="50.0" layoutY="247.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="183.0" styleClass="sale" text="Compra" />
+      <Button fx:id="BotonTodos" layoutX="50.0" layoutY="556.0" mnemonicParsing="false" onMouseClicked="#VerTodos" prefHeight="204.0" prefWidth="183.0" styleClass="sale" text="Mis pedidos" />
+      <TextField fx:id="txt_Compra" layoutX="277.0" layoutY="303.0" styleClass="line" />
+      <TextField fx:id="txt_Alquiler" layoutX="277.0" layoutY="457.0" styleClass="line" />
+      <Button fx:id="VolverMenu" layoutX="26.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#VolverMenu" styleClass="shiny" text="Menú" />
+      <Button fx:id="BotonComprar" layoutX="670.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#Comprar" styleClass="shiny" text="¡Comprar!" />
+      <Button fx:id="BotonAlquilar" layoutX="672.0" layoutY="454.0" mnemonicParsing="false" onMouseClicked="#Alquilar" styleClass="shiny" text="¡Alquilar!" />
+      <TextArea id="Descripcion" fx:id="Todos" editable="false" layoutX="277.0" layoutY="556.0" prefHeight="204.0" prefWidth="490.0" styleClass="blue" />
+      <Text fill="WHITE" layoutX="253.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Introduce el codigo del videojuego" wrappingWidth="255.0" />
+      <Text fill="WHITE" layoutX="253.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Introduce el codigo del videojuego" wrappingWidth="255.0" />
+      <ComboBox fx:id="ComboboxDias" layoutX="538.0" layoutY="433.0" prefHeight="23.0" prefWidth="96.0" styleClass="sale" />
+      <Text fill="WHITE" layoutX="559.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nºdías" wrappingWidth="55.0" />
+      <Text fx:id="Resultado" fill="#f9ff50" layoutX="103.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24;" styleClass="textos" wrappingWidth="464.6646499633789" />
+   </children>
+</AnchorPane>

@@ -2,6 +2,7 @@
 #Descripcion{
 -fx-background-color: #6E33FF;
 -fx-text-fill: Purple;
+   -fx-font-size: 1.0em;
 }
 #menu{
   -fx-font: oblique bold 130% cursive;
@@ -123,8 +124,6 @@
     -fx-background-insets: 0,1,2,3;
     -fx-background-radius: 3,2,2,2;
     -fx-padding: 12 30 12 30;
-    -fx-text-fill: white;
-    -fx-font-size: 12px;
 }
 .blue Text {
     -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
@@ -148,12 +147,12 @@
     -fx-text-fill: white;
     -fx-font-family: "Arial Narrow";
     -fx-font-weight: bold;
-  -fx-background-color: linear-gradient(#035F85, #1385B4);
+  -fx-background-color: linear-gradient(#6c03ff, #7816c9);
    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
 }
 
 .line:hover{     
-  -fx-background-color: linear-gradient(#1385B4, #035F85);
+  -fx-background-color: linear-gradient(#6a3ac9, #4104ba);
   -fx-text-fill:white;
   -fx-font-weight:bold; 
  
@@ -188,24 +187,6 @@
     -fx-font-size: 14px;
     -fx-padding: 10 20 10 20;
 }
-
-/*--------------------------------------------------------------------------------------------------------------------------------*/
-
-.redline{
-    -fx-text-fill: red;
-    -fx-font-family: "Arial Narrow";
-    -fx-font-weight: bold;
-   -fx-border-color:red;
-   -fx-background-color:null;
-}
-
-.redline:hover{     
-  -fx-background-color: red;
-  -fx-text-fill:white;
-  -fx-font-weight:bold; 
- 
-}
-
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
 
 .yellow {
@@ -330,39 +311,18 @@
     -fx-font-size: 12px;
     -fx-padding: 10 20 10 20;
 }
-
-/*------------------------------------------------------------------------------------------------------------*/
-
-.rnd{
-    -fx-text-fill: white;
-    -fx-font-family: "Arial Narrow";
-    -fx-font-weight: bold;
-   -fx-border-color:null;
-   -fx-background-color:green;
-   -fx-background-radius: 0%;
-}
-
-.rnd:hover{     
-  -fx-background-color: null;
-  -fx-text-fill:green;
-  -fx-font-weight:bold; 
-  -fx-background-radius: 0%;
-  -fx-border-color: green;
- 
-}
-
 /*---------------------------------------------------------------------------------------------------------------*/
 
 .but{
     -fx-text-fill: white;
     -fx-font-family: "Arial Narrow";
     -fx-font-weight: bold;
-    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-background-color: linear-gradient(#8661b1, #452a58);
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
 }
 
 .but:hover {
-    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+    -fx-background-color: linear-gradient(#3b2a58, #8a61b1);
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
@@ -393,6 +353,8 @@
     -fx-font-size: 14px;
     -fx-padding: 10 20 10 20;
 }
+#textoblanco{
+-fx-text-fill: white;}
 
 
 

@@ -9,14 +9,14 @@
    <children>
       <Text fx:id="cerrar" layoutX="771.0" layoutY="27.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
       <Text fill="WHITE" layoutX="81.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 58;" text="Catálogo de videojuegos" wrappingWidth="664.7513656616211" />
-      <Button fx:id="Volver" layoutX="707.0" layoutY="737.0" mnemonicParsing="false" onMouseClicked="#VolverInicio" prefHeight="37.0" prefWidth="78.0" styleClass="sale" text="Menú" />
-      <Button layoutX="32.0" layoutY="164.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Todos" textAlignment="CENTER" />
-      <Button layoutX="32.0" layoutY="249.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Acción" textAlignment="CENTER" />
-      <Button layoutX="32.0" layoutY="330.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Terror" textAlignment="CENTER" />
-      <Button layoutX="32.0" layoutY="406.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Carrera" textAlignment="CENTER" />
-      <Button layoutX="32.0" layoutY="482.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Deporte" textAlignment="CENTER" />
-      <Button layoutX="32.0" layoutY="559.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Aventura" textAlignment="CENTER" />
-      <Button layoutX="32.0" layoutY="642.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Rol" textAlignment="CENTER" />
-      <TextArea layoutX="192.0" layoutY="209.0" prefHeight="436.0" prefWidth="569.0" />
+      <Button fx:id="Volver" layoutX="707.0" layoutY="737.0" mnemonicParsing="false" onMouseClicked="#VolverInicio" prefHeight="37.0" prefWidth="78.0" styleClass="shiny" text="Menú" />
+      <Button fx:id="BotonTodos" layoutX="32.0" layoutY="164.0" mnemonicParsing="false" onMouseClicked="#Todos" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Todos" textAlignment="CENTER" />
+      <Button fx:id="BotonAccion" layoutX="32.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#Acccion" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Acción" textAlignment="CENTER" />
+      <Button fx:id="BotonTerror" layoutX="32.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#Terror" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Terror" textAlignment="CENTER" />
+      <Button fx:id="BotonCarrera" layoutX="32.0" layoutY="406.0" mnemonicParsing="false" onMouseClicked="#Carrera" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Carrera" textAlignment="CENTER" />
+      <Button fx:id="BotonDeporte" layoutX="32.0" layoutY="482.0" mnemonicParsing="false" onMouseClicked="#Deporte" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Deporte" textAlignment="CENTER" />
+      <Button fx:id="BotonAventura" layoutX="32.0" layoutY="559.0" mnemonicParsing="false" onMouseClicked="#Aventura" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Aventura" textAlignment="CENTER" />
+      <Button fx:id="BotonRol" layoutX="32.0" layoutY="642.0" mnemonicParsing="false" onMouseClicked="#Rol" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Rol" textAlignment="CENTER" />
+      <TextArea id="Descripcion" fx:id="txt_Visor" editable="false" layoutX="192.0" layoutY="209.0" prefHeight="436.0" prefWidth="569.0" styleClass="shiny" />
    </children>
 </AnchorPane>
