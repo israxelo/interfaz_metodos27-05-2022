@@ -5,10 +5,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 import java.sql.Types;
-import java.util.Scanner;
 
 
 public class Conexion_y_metodos extends Main{
@@ -16,8 +14,8 @@ public class Conexion_y_metodos extends Main{
 		conectar();
 	}
 	private static String bd = "XE";
-	private static String login="alumno";
-	private static String password="alumno";
+	private static String login="PROYECTO";
+	private static String password="proyecto";
 	private static String url="jdbc:oracle:thin:@localhost:1521:"+bd;
 	static Connection conexion =null;
 	static Statement st =null;
@@ -48,7 +46,7 @@ public class Conexion_y_metodos extends Main{
 				rs = st.executeQuery("select * from videojuego");
 				break;
 			case 1:
-				rs = st.executeQuery("select * from videojuego where categoria = 'Acción'");
+				rs = st.executeQuery("select * from videojuego where categoria = 'Acciï¿½n'");
 				break;
 			case 2:
 				rs = st.executeQuery("select * from videojuego where categoria = 'Aventura'");
@@ -74,46 +72,48 @@ public class Conexion_y_metodos extends Main{
 		}
 
 	}
-	public static void Registro(String email2,String contra2) {
+	public static void Registro(String email2,String contra2) throws SQLException {
+		st = conexion.createStatement();
+		st.executeUpdate("insert into CLIENTES values ('"+email2+"','" + contra2+"')");
+		st.executeUpdate("commit");
+		email = email2;
+		contra = contra2;
+	}
+	public static int Iniciar_Sesion(String email2,String contra2) {
+		int aux = -1;
 		try {
-			st = conexion.createStatement();
-			st.executeUpdate("insert into CLIENTES values ('"+email2+"','" + contra2+"')");
-			st.executeUpdate("commit");
-			email = email2;
-			contra = contra2;
-		} 
-		catch (SQLIntegrityConstraintViolationException e) {
-			System.out.println("Este email ya está registrado");
-		}
-		catch (SQLException e) {
+			cs = conexion.prepareCall("{ ? = call REGISTRO(?,?)}");
+			cs.setString(2, email2);
+			cs.setString(3,contra2);
+			cs.registerOutParameter(1, Types.INTEGER);
+			cs.execute();
+			aux = cs.getInt(1);
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
+		if(aux==-1) {
+			return -1;
+		}
+		email = email2;
+		contra = contra2;
+		return 1;
 	}
-	public static void Iniciar_Sesion() {
-		String email2 = null;
-		String contra2 =null;
-		int aux = -1;
-		
-				try {
-					cs = conexion.prepareCall("{ ? = call REGISTRO(?,?)}");
-					cs.setString(2, email2);
-					cs.setString(3,contra2);
-					cs.registerOutParameter(1, Types.INTEGER);
-					cs.execute();
-					aux = cs.getInt(1);
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-				if(aux==-1) {
-					System.out.println("datos mal introducidos o inexistentes");
-				}
-		
-			email = email2;
-			contra = contra2;
-		
-
-	
-
-}
+	public static void ConsolasInsertar(String modelo,String descripcion,String direccion) throws SQLException {
+		st = conexion.createStatement();
+		st.executeUpdate("insert into CONSOLAS_ROTAS values ('"+modelo+"','" + descripcion+"', ' "+direccion+"','"+email+"')");
+		st.executeUpdate("commit");
+	}
+	public static String VerPedidos() {
+		String cadena = null;
+		try {
+			cs = conexion.prepareCall("{ ? = call VER_REPARACIONES(?)}");
+			cs.setString(2, email);
+			cs.registerOutParameter(1, Types.VARCHAR);
+			cs.execute();
+			cadena = cs.getNString(1);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return cadena;
+	}
 }

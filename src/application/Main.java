@@ -9,10 +9,8 @@ import javafx.scene.Scene;
 
 
 public class Main extends Application {
-	static Conexion_y_metodos bbdd ;
 	@Override
 	public void start(Stage primaryStage) {
-		 bbdd = new Conexion_y_metodos();
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("inicial.fxml"));
 			Scene scene = new Scene(root);
@@ -26,5 +24,6 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
+		
 	}
 }

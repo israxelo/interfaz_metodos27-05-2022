@@ -9,7 +9,7 @@
    <children>
       <Text fx:id="cerrar" layoutX="771.0" layoutY="27.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
       <Text id="menu" fill="WHITE" layoutX="62.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 67;" text="Menú" wrappingWidth="229.7513656616211" />
-      <Button layoutX="62.0" layoutY="209.0" mnemonicParsing="false" prefHeight="224.0" prefWidth="290.0" text="Catálogo">
+      <Button fx:id="BotonCatalogo" layoutX="62.0" layoutY="209.0" mnemonicParsing="false" onMouseClicked="#MenuCatalogo" prefHeight="224.0" prefWidth="290.0" text="Catálogo">
          <styleClass>
             <String fx:value="sale" />
             <String fx:value="textos" />
@@ -19,7 +19,7 @@
             <String fx:value="sale" />
             <String fx:value="textos" />
          </styleClass></Button>
-      <Button layoutX="255.0" layoutY="496.0" mnemonicParsing="false" prefHeight="224.0" prefWidth="290.0" text="Reparar consola">
+      <Button fx:id="botonReparar" layoutX="255.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#Reparar" prefHeight="224.0" prefWidth="290.0" text="Reparar consola">
          <styleClass>
             <String fx:value="sale" />
             <String fx:value="textos" />

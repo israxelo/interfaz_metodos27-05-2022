@@ -19,7 +19,7 @@
             <Text fx:id="cerrar" layoutX="782.0" layoutY="19.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="glass" text="X" />
             <Text fill="WHITE" layoutX="267.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 69;" text="Registro" />
             <Button fx:id="botonregistrarme" layoutX="353.0" layoutY="492.0" mnemonicParsing="false" onMouseClicked="#iniciar" styleClass="glass" text="Registrarme" />
-            <Text layoutX="213.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="prueba" textAlignment="CENTER" wrappingWidth="389.66465187072754" />
+            <Text fx:id="textomuestra" fill="#f9ff50" layoutX="123.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 23;" textAlignment="CENTER" wrappingWidth="568.6646518707275" />
          </children>
       </AnchorPane>
    </right>
