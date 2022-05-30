@@ -66,7 +66,7 @@ public class Conexion_y_metodos extends Main{
 				break;
 			}
 			while(rs.next()) {
-				cadena +=(rs.getString("COD_VIDEOJUEGO") + "---" + rs.getString("TITULO") +"--" + rs.getString("CATEGORIA") + "--" + rs.getDouble("PRECIO") + "\n");
+				cadena +=(rs.getString("COD_VIDEOJUEGO") + "---" + rs.getString("TITULO") +"--" + rs.getString("CATEGORIA") + "--" + rs.getDouble("PRECIO") + " $\n");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -142,7 +142,7 @@ public class Conexion_y_metodos extends Main{
 			st = conexion.createStatement();
 			rs = st.executeQuery("select * from PEDIDOS where EMAIL ='" +email+"'");
 			while(rs.next()) {
-				cadena +=(rs.getString("TIPO") + "---" + rs.getString("TITULO") +"--" + rs.getString("EMAIL") + "--" + rs.getDouble("PRECIO") +"--"+rs.getDate("FECHA") +"\n");
+				cadena +=(rs.getString("TIPO") + "---" + rs.getString("TITULO") +"--" + rs.getString("EMAIL")  +"--"+rs.getDate("FECHA") +"--"+rs.getDouble("PRECIO") +" $ \n");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

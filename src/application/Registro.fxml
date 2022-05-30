@@ -10,16 +10,16 @@
    <right>
       <AnchorPane id="fondoiniciarsesion" prefHeight="800.0" prefWidth="800.0" styleClass="textos" stylesheets="@application.css" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="botoniniciar" layoutX="349.0" layoutY="683.0" mnemonicParsing="false" onMouseClicked="#cambiar" styleClass="glass" text="Iniciar Sesión" />
-            <Text fill="WHITE" layoutX="303.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textos" text="Introduzca una contraseña" />
-            <Text fill="WHITE" layoutX="341.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textos" text="¿Ya tienes cuenta?" />
-            <TextField fx:id="txt_contra" layoutX="200.0" layoutY="433.0" minHeight="25.0" prefWidth="400.0" styleClass="glass" />
-            <TextField fx:id="txt_correo" layoutX="200.0" layoutY="309.0" minHeight="25.0" prefWidth="400.0" styleClass="glass" />
-            <Text fill="WHITE" layoutX="327.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textos" text="Introduzca un email" />
+            <Button fx:id="botoniniciar" layoutX="349.0" layoutY="703.0" mnemonicParsing="false" onMouseClicked="#cambiar" styleClass="glass" text="Iniciar Sesión" />
+            <Text fill="WHITE" layoutX="303.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textos" text="Introduzca una contraseña" />
+            <Text fill="WHITE" layoutX="341.0" layoutY="671.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textos" text="¿Ya tienes cuenta?" />
+            <TextField fx:id="txt_contra" layoutX="144.0" layoutY="460.0" minHeight="25.0" prefHeight="33.0" prefWidth="528.0" styleClass="glass" />
+            <TextField fx:id="txt_correo" layoutX="144.0" layoutY="314.0" minHeight="25.0" prefHeight="33.0" prefWidth="528.0" styleClass="glass" />
+            <Text fill="WHITE" layoutX="327.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textos" text="Introduzca un email" />
             <Text fx:id="cerrar" layoutX="782.0" layoutY="19.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="glass" text="X" />
-            <Text fill="WHITE" layoutX="267.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 69;" text="Registro" />
-            <Button fx:id="botonregistrarme" layoutX="353.0" layoutY="492.0" mnemonicParsing="false" onMouseClicked="#iniciar" styleClass="glass" text="Registrarme" />
-            <Text fx:id="textomuestra" fill="#f9ff50" layoutX="123.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 23;" textAlignment="CENTER" wrappingWidth="568.6646518707275" />
+            <Text fill="WHITE" layoutX="267.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 69;" text="Registro" />
+            <Button fx:id="botonregistrarme" layoutX="352.0" layoutY="526.0" mnemonicParsing="false" onMouseClicked="#iniciar" styleClass="glass" text="Registrarme" />
+            <Text fx:id="textomuestra" fill="#f9ff50" layoutX="123.0" layoutY="602.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 23;" textAlignment="CENTER" wrappingWidth="568.6646518707275" />
          </children>
       </AnchorPane>
    </right>
