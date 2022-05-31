@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
@@ -10,12 +11,12 @@
       <Text fx:id="cerrar" layoutX="771.0" layoutY="27.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
       <Button fx:id="Cambio" layoutX="335.0" layoutY="718.0" mnemonicParsing="false" onMouseClicked="#cambiar" prefHeight="33.0" prefWidth="130.0" styleClass="glass" text="Registrarme" />
       <TextField fx:id="txt_IniciarSesion" layoutX="136.0" layoutY="355.0" prefHeight="25.0" prefWidth="542.0" styleClass="glass" />
-      <TextField fx:id="txt_Contra" layoutX="136.0" layoutY="474.0" prefHeight="25.0" prefWidth="542.0" styleClass="glass" />
       <Text fill="WHITE" layoutX="386.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
       <Text fill="WHITE" layoutX="365.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
       <Button fx:id="iniciar" layoutX="341.0" layoutY="603.0" mnemonicParsing="false" onMouseClicked="#iniciar" styleClass="glass" text="Iniciar Sesion" />
       <Text fill="WHITE" layoutX="338.0" layoutY="678.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿No tienes cuenta?" />
       <Text fill="WHITE" layoutX="206.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 67;" text="Iniciar sesión" wrappingWidth="417.7513656616211" />
       <Text fx:id="Resultado" fill="#f9ff50" layoutX="185.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 23;" textAlignment="CENTER" wrappingWidth="444.66465187072754" />
+      <PasswordField fx:id="txt_Contra" layoutX="135.0" layoutY="478.0" prefHeight="33.0" prefWidth="542.0" styleClass="glass" />
    </children>
 </AnchorPane>

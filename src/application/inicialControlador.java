@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -21,12 +22,13 @@ public class inicialControlador {
 	private Button Cambio;
 	@FXML
     private Text Resultado;
+
+    @FXML
+    private PasswordField txt_Contra;
 	@FXML
 	private Text cerrar;
 	@FXML
 	private Button iniciar;
-	@FXML
-	private TextField txt_Contra;
 
 	@FXML
 	private TextField txt_IniciarSesion;
