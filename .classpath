@@ -11,11 +11,11 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JAVAFX">
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Javafx">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/isra/Downloads/ojdbc11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/daw/Downloads/ojdbc11 (2).jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

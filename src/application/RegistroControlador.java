@@ -78,17 +78,22 @@ public class RegistroControlador extends inicialControlador{
 		}
 	}
 	boolean registro(String correo,String contra) {
+		if (correo == "" || contra =="") {
+			textomuestra.setText("¡FALTAN CAMPOS POR RELLENAR!");
+			return false;
+		}
+		else {
 		try {
 			bbdd.Registro(correo, contra);
 			return true;
 		} catch (SQLIntegrityConstraintViolationException e1) {
-			textomuestra.setText("Â¡Ya existe una cuenta registrada con este email!");
+			textomuestra.setText("¡Ya existe una cuenta registrada con este email!");
 			return false;
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
 			return false;
-		}
+		}}
 	}
 
 	public Object cerrar() {

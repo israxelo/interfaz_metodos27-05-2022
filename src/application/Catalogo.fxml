@@ -17,6 +17,6 @@
       <Button fx:id="BotonDeporte" layoutX="32.0" layoutY="482.0" mnemonicParsing="false" onMouseClicked="#Deporte" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Deporte" textAlignment="CENTER" />
       <Button fx:id="BotonAventura" layoutX="32.0" layoutY="559.0" mnemonicParsing="false" onMouseClicked="#Aventura" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Aventura" textAlignment="CENTER" />
       <Button fx:id="BotonRol" layoutX="32.0" layoutY="642.0" mnemonicParsing="false" onMouseClicked="#Rol" prefHeight="42.0" prefWidth="124.0" styleClass="sale" text="Rol" textAlignment="CENTER" />
-      <TextArea id="Descripcion" fx:id="txt_Visor" editable="false" layoutX="192.0" layoutY="209.0" prefHeight="436.0" prefWidth="569.0" styleClass="shiny" />
+      <TextArea id="Descripcion" fx:id="txt_Visor" editable="false" layoutX="192.0" layoutY="209.0" prefHeight="436.0" prefWidth="569.0" styleClass="blue" />
    </children>
 </AnchorPane>

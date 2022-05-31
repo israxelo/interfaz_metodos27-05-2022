@@ -14,8 +14,8 @@ public class Conexion_y_metodos extends Main{
 		conectar();
 	}
 	private static String bd = "XE";
-	private static String login="PROYECTO";
-	private static String password="proyecto";
+	private static String login="alumno";
+	private static String password="alumno";
 	private static String url="jdbc:oracle:thin:@localhost:1521:"+bd;
 	static Connection conexion =null;
 	static Statement st =null;
@@ -47,7 +47,7 @@ public class Conexion_y_metodos extends Main{
 				rs = st.executeQuery("select * from videojuego");
 				break;
 			case 1:
-				rs = st.executeQuery("select * from videojuego where categoria = 'AcciÃ³n'");
+				rs = st.executeQuery("select * from videojuego where categoria = 'Acción'");
 				break;
 			case 2:
 				rs = st.executeQuery("select * from videojuego where categoria = 'Aventura'");

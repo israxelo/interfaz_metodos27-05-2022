@@ -12,14 +12,14 @@
    <children>
       <Text fx:id="cerrar" layoutX="771.0" layoutY="27.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
       <ComboBox id="textoblanco" fx:id="Modelos" layoutX="64.0" layoutY="243.0" prefHeight="61.0" prefWidth="198.0" styleClass="sale" />
-      <TextArea id="Descripcion" fx:id="txt_Descripcion" layoutX="316.0" layoutY="304.0" prefHeight="247.0" prefWidth="474.0" styleClass="shiny_r" stylesheets="@application.css">
+      <TextArea id="Descripcion" fx:id="txt_Descripcion" layoutX="316.0" layoutY="304.0" prefHeight="247.0" prefWidth="474.0" styleClass="shiny" stylesheets="@application.css">
          <font>
             <Font size="13.0" />
          </font></TextArea>
       <Text fill="WHITE" layoutX="170.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 44;" styleClass="textos" text="Reparación de consolas" wrappingWidth="490.66465187072754" />
       <TextField fx:id="txt_Direccion" layoutX="93.0" layoutY="625.0" prefHeight="43.0" prefWidth="645.0" styleClass="sale" />
       <Text fill="WHITE" layoutX="85.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 23;" styleClass="textos" text="Elige el modelo" wrappingWidth="169.6374969482422" />
-      <Text fill="WHITE" layoutX="415.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 21;" styleClass="textos" text="Haznos una descripción de los problemas de la consola" textAlignment="CENTER" wrappingWidth="334.6374969482422" />
+      <Text fill="WHITE" layoutX="386.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 21;" styleClass="textos" text="Haznos una descripción de los problemas de la consola" textAlignment="CENTER" wrappingWidth="334.6374969482422" />
       <Text fill="WHITE" layoutX="88.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 23;" styleClass="textos" text="Escribe la dirección de envío" textAlignment="CENTER" wrappingWidth="306.6374969482422" />
       <Button fx:id="Volver" layoutX="33.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#CambiarMenu" styleClass="shiny" text="Menu" />
       <Button fx:id="Confirmar" layoutX="568.0" layoutY="707.0" mnemonicParsing="false" onMouseClicked="#Insertar" prefHeight="33.0" prefWidth="170.0" styleClass="shiny" text="Confirmar" />
